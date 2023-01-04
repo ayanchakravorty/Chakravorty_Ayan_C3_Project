@@ -64,4 +64,9 @@ public class Restaurant {
         return name;
     }
 
+    public int getOrderValue(List<String> itemNames) throws itemNotFoundException {
+        int orderValue = 0;
+        return orderValue;
+    }
+
 }
