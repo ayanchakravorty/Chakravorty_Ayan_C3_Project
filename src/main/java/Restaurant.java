@@ -68,6 +68,9 @@ public class Restaurant {
         int orderValue = 0;
         for(String itemName: itemNames) {
             Item currentItem = findItemByName(itemName);
+            if(currentItem == null) {
+                throw new itemNotFoundException(itemName);
+            }
             orderValue += currentItem.getPrice();
         }
         return orderValue;

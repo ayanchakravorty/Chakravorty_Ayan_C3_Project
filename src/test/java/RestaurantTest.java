@@ -80,4 +80,5 @@ class RestaurantTest {
         assertThrows(itemNotFoundException.class,
                 ()-> restaurant.getOrderValue(selectedItemsList));
     }
+    //<<<<<<<<<<<<<<<<<<<<<<<ORDER/TOTAL>>>>>>>>>>>>>>>>>>>>>>
 }
