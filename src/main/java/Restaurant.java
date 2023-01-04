@@ -66,6 +66,10 @@ public class Restaurant {
 
     public int getOrderValue(List<String> itemNames) throws itemNotFoundException {
         int orderValue = 0;
+        for(String itemName: itemNames) {
+            Item currentItem = findItemByName(itemName);
+            orderValue += currentItem.getPrice();
+        }
         return orderValue;
     }
 

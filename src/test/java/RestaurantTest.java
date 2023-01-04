@@ -71,4 +71,13 @@ class RestaurantTest {
         selectedItemsList.add("Sweet corn soup");
         assertEquals(388, restaurant.getOrderValue(selectedItemsList));
     }
+
+    @Test
+    public void items_not_in_menu_should_throw_itemNotFoundException() throws itemNotFoundException {
+        List<String> selectedItemsList = new ArrayList<String>();
+        selectedItemsList.add("Vegetable lasagne");
+        selectedItemsList.add("French fries");
+        assertThrows(itemNotFoundException.class,
+                ()-> restaurant.getOrderValue(selectedItemsList));
+    }
 }
